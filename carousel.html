@@ -12,7 +12,7 @@
     <link href="css/bootstrap2.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
-    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="css/google-prettify.css" rel="stylesheet">
  <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-146052-10']);
@@ -32,7 +32,7 @@
 
             <h2> Carouse Around the world</h2>
             <p>This is a carousel that is touch friendly!</p>
-            <div class="bs-docs-example">
+            <h4>Swipe LEFT or Right</h4>
               <div id="myCarousel" class="carousel slide">
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -73,7 +73,7 @@
                 <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
               </div>
-            </div>
+            
 
 
            
@@ -84,20 +84,17 @@
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/holder.js"></script>
-    <script src="js/google-code-prettify/prettify.js"></script>
-    <script src="js/application.js"></script>
-    <script src=”js/hammer.js”></script>
-    <script src=”js/jquery.hammer.js”></script>
-    <script src=”js/jquery.mobile-1.4.1.js”></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/hammer.js"></script>
+    <script src="js/jquery.hammer.js"></script>
+   
     
     <script>
       $(document).ready(function() {  
-    	$('#myCarousel').hammer().on('touch', function(){
+    	$('#myCarousel').hammer().on('swipeleft', function(){
   			$(this).carousel('next'); 
   		})
-  		$('#myCarousel').hammer().on('touch', function(){
+  		$('#myCarousel').hammer().on('swiperight', function(){
   			$(this).carousel('prev'); 
   		})
  }); 
